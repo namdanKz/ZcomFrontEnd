@@ -1,0 +1,64 @@
+<!-- <div class="quiz-container">
+    <h1>Quiz</h1>
+    <div *ngFor="let question of questions; let i = index">
+      <p>{{i + 1}}) {{question.questionText}}</p>
+      <div *ngFor="let answer of question.answers">
+        <input type="radio" [name]="'question' + i" [value]="answer.answerText"> {{answer.answerText}}
+      </div>
+    </div>
+    <button class="custom-button">Save</button>
+    <button class="custom-button">Submit</button>
+</div>
+   -->
+
+<!-- <div class="quiz-container">
+    <h1>Quiz</h1>
+    <div *ngFor="let question of questions; let i = index">
+      <p>{{i + 1}}) {{question.questionText}}</p>
+      <div *ngFor="let answer of question.answers; let j = index">
+        <input type="radio" [name]="'question' + i" [value]="j" [(ngModel)]="question.selectedAnswerIndex"> {{answer.answerText}}
+      </div>
+    </div>
+    <button class="custom-button">Save</button>
+    <button class="custom-button">Submit</button>
+</div> -->
+
+<!-- <div class="quiz-container">
+    <h1>Quiz</h1>
+    <div *ngFor="let question of questions; let i = index">
+      <p>{{i + 1}}) {{question.questionText}}</p>
+      <div *ngFor="let answer of question.answers; let j = index">
+        <input type="radio" [name]="'question' + i" [value]="j" [(ngModel)]="question.selectedAnswerIndex"> {{answer.answerText}}
+      </div>
+    </div>
+    <button class="custom-button">Save</button>
+    <button class="custom-button">Submit</button>
+</div> -->
+
+<!-- <div class="quiz-container">
+    <h1>Quiz</h1>
+    <div *ngFor="let question of questions; let i = index">
+      <p>{{i + 1}}) {{question.questionText}}</p>
+      <div *ngFor="let answer of question.answers; let j = index">
+        <input type="radio" [name]="'question' + i" [value]="j" [(ngModel)]="question.selectedAnswerIndex"> {{answer.answerText}}
+      </div>
+    </div>
+    <button class="custom-button" (click)="saveAnswers()">Save</button>
+    <button class="custom-button">Submit</button>
+</div> -->
+
+<div class="quiz-container">
+    <h1>Quiz</h1>
+    <div *ngFor="let question of questions; let i = index">
+      <p>{{i + 1}}) {{question.questionText}}</p>
+      <div *ngFor="let answer of question.answers; let j = index">
+        <input type="radio" [name]="'question' + i" [value]="answer.answerId" [(ngModel)]="question.selectedAnswerId"> {{answer.answerText}}
+      </div>
+    </div>
+    <button class="custom-button" (click)="saveAnswers()">Save</button>
+    <button class="custom-button" (click)="saveAnswersThenSubmit()">Submit</button>
+  </div>
+  
+  
+  
+  

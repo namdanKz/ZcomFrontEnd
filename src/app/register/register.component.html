@@ -1,0 +1,46 @@
+<!-- <div class="register-container">
+  <h1>Register</h1>
+  <div>
+    <label for="user-group">User Group</label>
+    <select id="user-group">
+      <option *ngFor="let group of userGroups" [value]="group.id">{{ group.groupName }}</option>
+    </select>
+  </div>
+  <div>
+    <label for="name">Name</label>
+    <input id="name" type="text">
+  </div>
+  <button class="custom-button">Go</button>
+</div> -->
+
+
+<!-- <div class="register-container">
+  <h1>Register</h1>
+  <div>
+    <label for="user-group">User Group</label>
+    <select id="user-group">
+      <option *ngFor="let group of userGroups" [value]="group.id">{{ group.groupName }}</option>
+    </select>
+  </div>
+  <div>
+    <label for="name">Name</label>
+    <input id="name" type="text">
+  </div>
+  <button class="custom-button">Go</button>
+</div> -->
+
+
+<div class="register-container">
+  <h1>Register</h1>
+  <div>
+    <label for="user-group">User Group</label>
+    <select id="user-group" [(ngModel)]="selectedUserGroupId">
+      <option *ngFor="let group of userGroups" [value]="group.id">{{ group.groupName }}</option>
+    </select>
+  </div>
+  <div>
+    <label for="name">Name</label>
+    <input id="name" type="text" [(ngModel)]="userName">
+  </div>
+  <button class="custom-button" (click)="register()">Go</button>
+</div>
